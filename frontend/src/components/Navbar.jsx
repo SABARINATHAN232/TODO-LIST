@@ -37,7 +37,7 @@ const Navbar = ({ user = {}, onLogout }) => {
 
       {/* Stylish Brand Name */}
       <span className="text-2xl font-extrabold bg-gradient-to-r from-rose-500 via-violet-500 to-indigo-500 bg-clip-text text-transparent tracking-wide">
-        TaskFlow
+        TODO-LIST
       </span>
     </div>
 

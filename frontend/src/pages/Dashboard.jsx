@@ -12,7 +12,7 @@ import {
 } from '../assets/dummy'
 
 // API Base
-const API_BASE = "http://localhost:4000/api/tasks"
+const API_BASE = "https://todolistbackend-tk7s.onrender.com/api/tasks"
 
 const Dashboard = () => {
   const { tasks, refreshTasks } = useOutletContext()

@@ -16,7 +16,7 @@ const Login = ({ onSubmit, onSwitchMode }) => {
   const [rememberMe, setRememberMe] = useState(false)
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
-  const url = "http://localhost:4000"
+  const url = "https://todolistbackend-tk7s.onrender.com"
 
   // Auto-login
   useEffect(() => {
@@ -103,7 +103,7 @@ const Login = ({ onSubmit, onSwitchMode }) => {
           <LogIn className="w-8 h-8 text-white" />
         </div>
         <h2 className="text-2xl font-bold text-gray-800">Welcome Back</h2>
-        <p className="text-gray-500 text-sm mt-1">Sign in to continue to TaskFlow</p>
+        <p className="text-gray-500 text-sm mt-1">Sign in to continue to todo-list</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
