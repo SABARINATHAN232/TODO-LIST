@@ -3,7 +3,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { PlusCircle, X, Save, Calendar, AlignLeft, Flag, CheckCircle } from 'lucide-react';
 import { baseControlClasses, priorityStyles, DEFAULT_TASK } from '../assets/dummy';
 
-const API_BASE = 'http://localhost:4000/api/tasks';
+const API_BASE = 'https://todolistbackend-tk7s.onrender.com/api/tasks';
+
 
 const TaskModal = ({ isOpen, onClose, taskToEdit, onSave, onLogout }) => {
   const [taskData, setTaskData] = useState(DEFAULT_TASK);
@@ -154,27 +155,7 @@ const TaskModal = ({ isOpen, onClose, taskToEdit, onSave, onLogout }) => {
         </div>
       </div>
 
-      <div>
-        <label className="text-sm font-medium text-gray-700 mb-2 flex items-center gap-1">
-          <CheckCircle className="w-4 h-4 text-blue-500" /> Status
-        </label>
-        <div className="flex gap-4">
-          {[{ val: 'Yes', label: 'Completed' }, { val: 'No', label: 'In Progress' }].map(({ val, label }) => (
-            <label key={val} className="flex items-center">
-              <input
-                type="radio"
-                name="completed"
-                value={val}
-                checked={taskData.completed === val}
-                onChange={handleChange}
-                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-              />
-              <span className="ml-2 text-sm text-gray-700">{label}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
+     
       <button
         type="submit"
         disabled={loading}
